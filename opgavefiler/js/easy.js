@@ -21,7 +21,7 @@ myAnswerButtonEx1ByMariePierreLessard.addEventListener('click', (event) => {
 
     /* In parentheses, you can also put a parameter that represents different DOM elements. Each case will represent the DOM element on which the user clicked, for instance... 
     In JS: 
-    - function functionName(parameterForElement) {... IF I REMEMBER PROPERLY: switch (parameterForElement) {... case input: ...}; ...};
+    - function functionName(parameterForElement) {... IF I REMEMBER PROPERLY, see exercise 5: switch (parameterForElement) {... case input: ...}; ...};
     In DOM: 
     - event listener of input: onclick="functionName(input)"
     - event listener of Save button: onclick="functionName(save)"
@@ -94,12 +94,15 @@ function showErrorMsgEx1ByMariePierreLessard(myError) {
     myError = "Du har valgt: "+myAnswerInputEx1ByMariePierreLessard.value+". Tallet er ikke tilladt."; 
     myAnswerFeedbackElementEx1ByMariePierreLessard.innerHTML=`<p>${myError}</p>`;
 };
+// Exercises 1 and 2 checked
 
 // opgave 3 og 4
 myAnswerInputEx3ByMariePierreLessard = document.getElementById('InputTwo');
 myAnswerButtonEx3ByMariePierreLessard = document.getElementById('answerButtonTwo');
 
 myAnswerFeedbackElementEx3ByMariePierreLessard = document.getElementById('answerFeedbackTwo');
+
+let month = "";
 
 myAnswerButtonEx3ByMariePierreLessard.addEventListener('click', (event) => {
     event.preventDefault();
@@ -110,60 +113,70 @@ myAnswerButtonEx3ByMariePierreLessard.addEventListener('click', (event) => {
 
         case "1":
             // code block
+            month = "Januar";
             console.log("1 for januar");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "2":
             // code block
+            month = "Februar";
             console.log("2 for februar");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "3":
             // code block
+            month = "Marts";
             console.log("3 for marts");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "4":
             // code block
+            month = "April";
             console.log("4 for april");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "5":
             // code block
+            month = "Maj";
             console.log("5 for maj");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "6":
             // code block
+            month = "Juni";
             console.log("6 for juni");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "7":
             // code block
+            month = "Juli";
             console.log("7 for juli");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "8":
             // code block
+            month = "August";
             console.log("8 for august");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "9":
             // code block
+            month = "September";
             console.log("9 for september");
             showMessageEx3ByMariePierreLessard();
         break;    
 
         case "10":
             // code block
+            month = "October";
             console.log("10 for oktober");
             showMessageEx3ByMariePierreLessard();
         break;
@@ -171,6 +184,7 @@ myAnswerButtonEx3ByMariePierreLessard.addEventListener('click', (event) => {
 
         case "11":
             // code block
+            month = "November";
             console.log("11 for november");
             showMessageEx3ByMariePierreLessard();
         break;
@@ -178,7 +192,7 @@ myAnswerButtonEx3ByMariePierreLessard.addEventListener('click', (event) => {
 
         case "12":
             // code block
-            let month = "December";
+            month = "December";
             console.log("12 for december");
             showMessageEx3ByMariePierreLessard();
         break;
@@ -190,16 +204,16 @@ myAnswerButtonEx3ByMariePierreLessard.addEventListener('click', (event) => {
 });
 
 /* din view function her */
-/* TO DO: add name of month in message below. Trying to use variable month doesn't work below, but it works above. */
 function showMessageEx3ByMariePierreLessard(myMessage) {
     myMessage = month+" er den "+myAnswerInputEx3ByMariePierreLessard.value+". måned af året."; 
     myAnswerFeedbackElementEx3ByMariePierreLessard.innerHTML=`<p>${myMessage}</p>`;
 };
 
 function showErrorMsgEx3ByMariePierreLessard(myError) {
-    myError = "Du har valgt: "+myAnswerInputEx3ByMariePierreLessard.value+". Tallet er ikke tilladt."; 
+    myError = "Du har valgt: "+myAnswerInputEx3ByMariePierreLessard.value+". Tallet svarer ikke til en måned."; 
     myAnswerFeedbackElementEx3ByMariePierreLessard.innerHTML=`<p>${myError}</p>`;
 };
+// Exercises 3 and 4 checked
 
 
 // opgave 5
@@ -208,20 +222,134 @@ myAnswerButtonEx5ByMariePierreLessard = document.getElementById('answerButtonFiv
 
 myAnswerFeedbackElementEx5ByMariePierreLessard = document.getElementById('answerFeedbackFive');
 
+let dayOfWeek = "";
+
 myAnswerButtonEx5ByMariePierreLessard.addEventListener('click', (event) => {
    event.preventDefault();
 
    console.warn('opgave 5');
 
-   workDays(myAnswerInputEx5ByMariePierreLessard.value)
+   workDaysByMariePierreLessard(myAnswerInputEx5ByMariePierreLessard.value);
   
 });
 
+/* din kode her.*/
 
- /* din kode her.*/
+function workDaysByMariePierreLessard(dayofweek) {
+    switch (dayofweek) {
 
+        case "mandag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Mandag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break; 
 
+        case "Mandag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Mandag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break; 
+
+        case "tirsdag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Tirsdag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "Tirsdag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Tirsdag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "onsdag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Onsdag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "Onsdag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Onsdag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "torsdag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Torsdag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "Torsdag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Torsdag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "fredag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Fredag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "Fredag":
+            // code block
+            dayOfWeek = "hverdag";
+            console.log("Fredag er en hverdag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "lørdag":
+            // code block
+            dayOfWeek = "weekenddag";
+            console.log("Lørdag er en weekenddag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "Lørdag":
+            // code block
+            dayOfWeek = "weekenddag";
+            console.log("Lørdag er en weekenddag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "søndag":
+            // code block
+            dayOfWeek = "weekenddag";
+            console.log("Søndag er en weekenddag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        case "Søndag":
+            // code block
+            dayOfWeek = "weekenddag";
+            console.log("Søndag er en weekenddag.");
+            showMessageEx5ByMariePierreLessard();
+        break;    
+
+        default:
+            console.log("Indtastningen er ikke en ugedag.");
+            showErrorMsgEx5ByMariePierreLessard();
+    };
+};
 
 /* din view function her */
+function showMessageEx5ByMariePierreLessard(myMessage) {
+    myMessage = "Din indtastning, "+myAnswerInputEx5ByMariePierreLessard.value+", er en "+dayOfWeek+"."; 
+    myAnswerFeedbackElementEx5ByMariePierreLessard.innerHTML=`<p>${myMessage}</p>`;
+};
 
-
+function showErrorMsgEx5ByMariePierreLessard(myError) {
+    myError = "Din indtastning, "+myAnswerInputEx5ByMariePierreLessard.value+", svarer ikke til en ugedag."; 
+    myAnswerFeedbackElementEx5ByMariePierreLessard.innerHTML=`<p>${myError}</p>`;
+};
+/* Exercise 5 checked */
